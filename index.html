@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Git Tutorial</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .step-container {
+            margin-bottom: 20px;
+        }
+
+        .step-container h3 {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .step-content {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .step-content pre {
+            background-color: #000;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Git Tutorial</h1>
+    <div class="step-container">
+        <h3 onclick="toggleStep('step1')">Step 1: Clone the repository</h3>
+        <div class="step-content" id="step1">
+            <p>Use the following command to clone the repository to your local machine:</p>
+            <pre><code>git clone https://github.com/BiAffect/SynapseDataProcessing.git</code></pre>
+        </div>
+    </div>
+
+    <!-- Repeat the following structure for each step -->
+    <div class="step-container">
+        <h3 onclick="toggleStep('step2')">Step 2: Pull existing scripts</h3>
+        <div class="step-content" id="step2">
+            <p>Before making changes, ensure you have the latest version of the repository on your local machine:</p>
+            <pre><code>git pull origin master</code></pre>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <h3 onclick="toggleStep('step3')">Step 3: Make changes and commit</h3>
+        <div class="step-content" id="step3">
+            <p>Make your changes to the file that may cause a merge conflict.</p>
+            <p>Add the changes to the staging area and commit them with a descriptive message:</p>
+            <pre><code>
+git add &lt;file_name&gt;
+git commit -m "Your commit message here"
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <h3 onclick="toggleStep('step4')">Step 4: Push changes to GitHub</h3>
+        <div class="step-content" id="step4">
+            <p>Push your committed changes back to the shared GitHub repository:</p>
+            <pre><code>git push origin master</code></pre>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <h3 onclick="toggleStep('step5')">Step 5: Resolve merge conflicts</h3>
+        <div class="step-content" id="step5">
+            <p>If there are multiple users making changes to the same file, it can lead to merge conflicts.</p>
+            <p>When you encounter merge conflicts, Git will indicate which files have conflicts. Open the conflicting
+                file(s) in a text editor and resolve the conflicts manually.</p>
+            <p>The conflicting lines will be marked, and you'll need to choose which version of the code to keep.</p>
+            <p>After resolving the conflicts, add the resolved changes to the staging area and commit them:</p>
+            <pre><code>
+git add &lt;file_name&gt;
+git commit -m "Merge conflict resolved"
+            </code></pre>
+        </div>
+    </div>
+
+    <script>
+        function toggleStep(stepId) {
+            var content = document.getElementById(stepId);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
