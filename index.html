@@ -37,6 +37,7 @@
             font-family: monospace;
             white-space: pre-wrap;
             word-wrap: break-word;
+            margin-bottom: 10px;
         }
 
         .copy-btn {
@@ -59,10 +60,10 @@
         <h3 onclick="toggleStep('step1')">Step 1: Clone the repository</h3>
         <div class="step-content" id="step1">
             <p>Use the following command to clone the repository to your local machine:</p>
-            <pre><code>
-git clone https://github.com/BiAffect/SynapseDataProcessing.git
+            <pre>
+<code id="step1-command">git clone https://github.com/BiAffect/SynapseDataProcessing.git</code>
 <button class="copy-btn" onclick="copyToClipboard('step1-command')">Copy</button>
-            </code></pre>
+            </pre>
         </div>
     </div>
 
@@ -71,10 +72,10 @@ git clone https://github.com/BiAffect/SynapseDataProcessing.git
         <h3 onclick="toggleStep('step2')">Step 2: Pull existing scripts</h3>
         <div class="step-content" id="step2">
             <p>Before making changes, ensure you have the latest version of the repository on your local machine:</p>
-            <pre><code>
-git pull origin master
+            <pre>
+<code id="step2-command">git pull origin master</code>
 <button class="copy-btn" onclick="copyToClipboard('step2-command')">Copy</button>
-            </code></pre>
+            </pre>
         </div>
     </div>
 
@@ -83,11 +84,11 @@ git pull origin master
         <div class="step-content" id="step3">
             <p>Make your changes to the file that may cause a merge conflict.</p>
             <p>Add the changes to the staging area and commit them with a descriptive message:</p>
-            <pre><code>
-git add &lt;file_name&gt;
-git commit -m "Your commit message here"
+            <pre>
+<code id="step3-command">git add &lt;file_name&gt;
+git commit -m "Your commit message here"</code>
 <button class="copy-btn" onclick="copyToClipboard('step3-command')">Copy</button>
-            </code></pre>
+            </pre>
         </div>
     </div>
 
@@ -95,10 +96,10 @@ git commit -m "Your commit message here"
         <h3 onclick="toggleStep('step4')">Step 4: Push changes to GitHub</h3>
         <div class="step-content" id="step4">
             <p>Push your committed changes back to the shared GitHub repository:</p>
-            <pre><code>
-git push origin master
+            <pre>
+<code id="step4-command">git push origin master</code>
 <button class="copy-btn" onclick="copyToClipboard('step4-command')">Copy</button>
-            </code></pre>
+            </pre>
         </div>
     </div>
 
@@ -110,11 +111,11 @@ git push origin master
                 file(s) in a text editor and resolve the conflicts manually.</p>
             <p>The conflicting lines will be marked, and you'll need to choose which version of the code to keep.</p>
             <p>After resolving the conflicts, add the resolved changes to the staging area and commit them:</p>
-            <pre><code>
-git add &lt;file_name&gt;
-git commit -m "Merge conflict resolved"
+            <pre>
+<code id="step5-command">git add &lt;file_name&gt;
+git commit -m "Merge conflict resolved"</code>
 <button class="copy-btn" onclick="copyToClipboard('step5-command')">Copy</button>
-            </code></pre>
+            </pre>
         </div>
     </div>
 
